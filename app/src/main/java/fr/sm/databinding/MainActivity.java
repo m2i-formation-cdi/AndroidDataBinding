@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         //Instanciation d'une personne
         joe = new Person("User", "Joe");
 
+        CurrencyConverter converter = new CurrencyConverter();
+
         //Création d'un objet de liason (binding)
         binding = DataBindingUtil.setContentView(
                 this,
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Définition des variables à lier
         binding.setPerson(joe);
+        binding.setConverter(converter);
     }
 
     public void onPromote(View view) {

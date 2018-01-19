@@ -6,6 +6,7 @@
 
     <data>
         <variable name="person" type="fr.sm.databinding.Person" />
+        <variable name="converter" type="fr.sm.databinding.CurrencyConverter"/>
     </data>
 
     <LinearLayout
@@ -32,7 +33,23 @@
             android:layout_height="wrap_content"
             android:text="@={person.name}"
             android:textSize="18sp"
-            android:padding="10dp"/>
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={converter.euroValue}"
+            android:textSize="18sp"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{converter.yenValue}"
+            android:padding="10dp"
+            android:textSize="36sp"/>
     </LinearLayout>
 </layout>
 
